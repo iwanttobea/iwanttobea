@@ -1,0 +1,43 @@
+<!doctype html>
+<title>i want to be a</title>
+
+<!-- for jquery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="{{
+  url_for('static', filename='jquery.js') }}">\x3C/script>')
+</script>
+
+<script type=text/javascript>
+  $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+</script>
+
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+{% if session.ismobile == True %}
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='stylemobile.css') }}">
+{% else %}
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+{% endif %}
+
+{% block navbar %}
+
+<div class=page>
+
+<table border="0" width=100%>
+  <tr>
+    {% if job != 'none' %}
+    <td align=left ><span class=metanavjob> {{ job }} </span></td>
+    {% endif %}
+    <td align=right><span class=metanav> <span class=greeting></span> <a href="{{ url_for('about') }}">about</a> </span>
+    </td>
+  </tr>
+</table>
+
+{% endblock %}
+
+{% for message in get_flashed_messages() %}
+  <div class=flash>{{ message }}</div>
+{% endfor %}
+{% block body %}{% endblock %}
+
+</div>

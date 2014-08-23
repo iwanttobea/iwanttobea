@@ -1,0 +1,315 @@
+
+body            { font-family: sans-serif; margin: 0px; background: #eee;}
+h1, h2       { color: #377ba8; color: #19D119;}
+/*h1, h2          { font-family: 'Georgia', serif; margin: 0; }*/
+
+.page           { margin: 0; width: 100%;
+                  padding: 0; background: #FFFFCC; border-radius: 0;}                                  
+.entries        { list-style: none; margin: 0; padding: 0; }
+.entries li     { margin: 0.8em 1.2em; }
+.entries li h2  { margin-left: -1em; }
+.add-entry      { font-size: 1em; text-align: left; padding: .5em 3em 3em 1em;}
+.send-msg		{ font-size: 1em; text-align: left; padding: .5em 3em 3em 1.2em;}
+.add-entry dl   { font-weight: bold; }
+.metanav        { color: #B4B4B4; text-align: right; font-size: .8em; padding-right: 1em; padding-left: 1em;}
+.metanavjob     { color: #B4B4B4; text-align: left; font-size: .8em; padding-right: 1em; padding-left: 1em;}
+.flash          { background: #cee5F5; padding: 0.5em;
+                  border: 1px solid #aacbe2; }
+.error          { background: #f0d6d6; padding: 0.5em; }
+
+.title			{ text-align: left; font-size: 3em; color: #525252; padding-left: .15em}
+
+.inpbox			{height: 2em; font-size: 1.2em; color: #D14D78; color: #00C424;}
+.emailtext		{height: 3.5em; font-size: 1em; color: #9C9C9C;}
+.credbox		{font-size: 1em; text-align: center;}
+
+a 				{color: #B4B4B4; text-decoration: none}
+
+.spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px; /* half width of the spinner gif */
+    margin-top: -50px; /* half height of the spinner gif */
+    text-align:center;
+    z-index:1234;
+    overflow: auto;
+    width: 100px; /* width of the spinner gif */
+    height: 102px; /*hight of the spinner gif +2px to fix IE8 issue */
+    padding-top: 5em;
+}
+
+#skills_screenshot { 
+   border:20px solid white;
+   border-radius: 25px;
+}
+
+.makegreen		{
+	color: #00C424;
+}
+
+#employers
+{
+	font-size: 1.5em;
+	color: #B4B4B4;
+	text-align: center;
+	padding-bottom: .7em;
+}
+
+#searchsubmit
+{    
+    visibility: hidden;
+}
+
+#screenshot {
+	text-align: center;
+	margin-bottom: 0em;
+	margin-top: 2em;
+}
+
+#caption {
+	font-size: .8em;
+	text-align: center;
+	margin-top: 0em;
+	padding-top: 0em;
+	padding-bottom: 0em;
+	margin-bottom: 0em;
+}
+
+#logininstructions {
+	font-size: .2em;
+	text-align: center;
+	margin-top: 0em;
+	margin-bottom: .8em;
+	color: #ADADAD;
+	/*margin-left: auto;*/
+    /*margin-right: auto;*/
+    /*width: 50em*/
+}
+
+
+#nomessages {
+	vertical-align: middle;
+	text-align: center;
+	padding-top: 100px;
+	font-size: 2em;
+	color: #00C424;
+}
+
+#scrollbox {
+	height: 300px;
+	overflow-y:scroll;
+	background-color: #f7f7f7;
+}
+
+#contactscroll {
+	height: 300px;
+	/*overflow-y:scroll;*/
+	background: #eee;
+	padding-top: 3em;
+}
+
+#disclaimer {
+	font-size: .7em;
+	text-align: center;
+	margin-left: auto;
+    margin-right: auto;
+    width: 50em
+}
+
+.disclaimerdiv {
+	text-align: center;
+}
+
+.mess {
+	font-size: 1em;
+	background: white;
+	width: 100%;
+	color: #9C9C9C ;
+	word-wrap:break-word;
+}
+
+.convowith {
+	font-size: 1em;
+	background: white;
+}
+
+#person{
+	color: #00C424;
+}
+
+#contp{
+  margin-top: 0px;
+  margin-bottom: 2px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+#messp{
+  margin-top: 0px;
+  margin-bottom: 2px;
+  margin-left: 0px;
+  margin-right: 0px;
+padding: 1em 1em 1em 1.5em;
+}
+
+#themidp{
+  margin-top: 0px;
+  margin-bottom: 2px;
+  margin-left: 0px;
+  margin-right: 0px;
+text-align: center;
+vertical-align: middle;
+font-size: .8em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  color: #00C424;
+}
+
+.email {
+	font-size: 2em;
+	color: #4D4D4D;
+	text-align: right;
+}
+
+.preview {
+	font-size: .7em;
+	color: #9C9C9C;
+
+}
+
+#contbut a{
+	text-decoration: none !important;
+}
+
+#contbut {
+	font-size: 1em;
+	margin: 0 auto;
+	padding: .7em 3em 2.9em 1.5em;
+	vertical-align: middle;
+	text-align: left;
+	/*width: 35em;*/
+	width: 100%;
+	height: 3em;
+	cursor: pointer;
+	background: white;
+	border: 0em;
+	-webkit-appearance: button;
+}
+
+.contwrap {
+	text-align: center;
+}
+
+#square {
+	text-align: center;
+	width: 100px;
+	height: 100px;
+	background: red;
+}
+
+#chatwith {
+	font-size: 1em;
+	background: white;
+	height: 4em;
+}
+
+#loginfields {
+	font-size: 1em;
+	background: #eee;
+	height: 19em;
+	padding-bottom: 1em;
+	padding-top: 10em;
+}
+
+.logintable { 
+	text-align: center;
+	font-size: 3em;
+	/*padding: 1em 4em .8em 4em;*/
+}
+
+.aboutbody {
+	background-color: #eee;
+	padding: 1em 2em 1em 2em;
+	margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+.aboutpage {
+	background-color: #eee;
+}
+
+#aboutp {
+	background-color: #eee;
+	/*padding: 3em 2em 3em 2em;*/
+	font-size: .9em;
+}
+
+li {
+	font-size: .9em;
+}
+
+.gmaillogo {
+	height: 4em;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 2.5em; 
+}
+
+#emailtextarea{
+	background: white;
+	height: 5em;
+}
+
+.submitbutton{
+	vertical-align: middle;
+}
+
+input[type="submit"] {
+	margin: 0 auto;
+	padding: .5em .5em .5em .5em;
+	vertical-align: middle;
+	text-align: center;
+	cursor: pointer;
+	background: #eee;
+	border: 2px solid #dbdbdb;
+}
+
+/*remove glow from button*/
+:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+
+
+/*####################
+scrollbar styling
+####################*/
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 8px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(300,300,300,0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(260,260,260,0.4); 
+}
+
+
+

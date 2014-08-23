@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+<!-- for jquery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="{{
+  url_for('static', filename='jquery.js') }}">\x3C/script>')
+</script>
+
+<script type=text/javascript>
+  $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+</script>
+
+<script>
+$(document).ready(function(){
+    $('#searchsubmit').click(function() {
+        $('#spinner').show();
+    });
+});
+</script>
+
+{% block body %}
+
+<div id="loginfields">
+<!--   <img src="{{ url_for('static', filename = 'gmail-logo.gif') }}" alt="Gmail" title="gmail-logo" class="gmaillogo"> -->
+  
+  <form action="{{ url_for('skills') }}" method=post class="logintable" style="margin: 0; text-align: center;" onsubmit="greeting()">
+    <table border="0" align=center>
+      <tr>
+        <td> <input type=text autocomplete="off" size=20 name=jobtitle class=credbox placeholder="i want to be a"><br> </td>
+          <!-- <input type=password size=30 name=password class=credbox placeholder="password"> </td> -->
+      </tr>
+      <tr>
+        <!-- <td> <p id="logininstructions">type in a job title and press enter</p> --> <input type=submit id=searchsubmit size=0 value="sign in"> </td>
+      </tr>   
+    </table>
+  </form>
+<div>
+
+<!-- style="display:none;" -->
+<div id="spinner" class="spinner" style="display:none;">
+    <img id="img-spinner" src="{{ url_for('static', filename='spinner.gif') }}" alt="Loading"/>
+</div>
+
+<script>
+function greeting()
+{
+// alert("Welcome ")
+$('#spinner').show();
+}
+</script> 
+
+<!--
+<script>
+$(document).ready(function(){
+
+    alert("IN THAT FUNC ")
+    $('#searchsubmit').click(function() {
+        $('#spinner').show();
+    });
+});
+</script>
+
+{% endblock %}
+-->

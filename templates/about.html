@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class=aboutpage>
+<div class=aboutbody>
+  
+    <h2> What does it do? </h2>
+
+    <p id="aboutp">
+    <li> Enter a job title/profession that you’re interested in. </li>
+    <li> The app searches for those jobs on a popular jobs site. </li>
+    <li> It looks through all the job postings that it found and grabs the most commonly requested skills. </li>
+    <li> It presents those skills with links to free online educational resources covering the topic. </li>
+    </p>
+
+    <p id="screenshot">
+    <img id=skills_screenshot src="{{ url_for('static', filename = 'skills_screenshot.jpg') }}" alt="" title="" class="cont" width="90%">
+    <p id="caption"> Search results for 'software developer' </p>
+    </p>
+
+    <h2> Why? </h2>
+
+    <p id="aboutp">
+    This is intended to get us thinking about how we can help people learn in-demand skills and forego college. The hope is that breaking down education and the labour market into skills that are needed and can be learned online for free, will make going to college and hoping to have the right skills when you're done look absurd. Wouldn't it be nice if the labour market and education system worked something like this app?
+    </p>
+
+    <p id="aboutp">
+    The app uses an algorithm that needs way more computational power (or time) than what is currently being used, so the results aren't going to be good. And it could take 60s for the results to load. But hopefully you get the idea.
+    </p>
+
+    <h2> Under the hood </h2>
+
+    <p id="aboutp">
+    <li>I searched a bunch of random jobs on a jobs site, parsed the text, and compiled a list of words and the frequencies in which they occur in that set of job posts. This gives us an idea of how often these words typically occur in a job post.</li>
+    <li> Then I look at job posts for the job title that is being searched and do the same thing. So now I have two dictionaries of words and their frequencies. The ‘specific to the search frequencies’ and the ‘typical job post frequencies’. </li>
+    <li> Then I look at the difference between a word’s ‘specific to the search frequency’ and the word’s ‘typical job post frequency’. If the ‘specific to the search frequency’ is higher, it’s probably an important word specific to that search. I look at the words with the largest differences between their two frequencies and consider them ‘skills’ and add them to the list. </li>
+
+    <p id="aboutp">
+    With enough job searches (>50) the algorithm works pretty well. The live version only uses 10 for time's sake.
+
+    <p id="aboutp">
+    There’s a little more to it than that, but those are the basics. The code is up here if you want to take a look yourself or fork it. There’s lots that could be improved: looking for ‘skills’ that are more than one word long, filtering results by things you think are actual skills (maybe from a database of skills from LinkedIn or something), caching results or multithreading to reduce loading time, and obviously matching up the results with more relevant free online educational materials. </p>
+
+    <h2> Get in touch with me </h2>
+
+    <p id="aboutp">
+    iwanttobeaapp at gmail dot com
+    </p>
+
+
+
+
+</div>
+</div>
+</div>
+{% endblock %}
