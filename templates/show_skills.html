@@ -16,11 +16,12 @@
   {% if skills!= [] %}  
 
   {% set barwidth = skill[1]*150 %}
+  {% set srurl = 'http://www.mysliderule.com/search?term='+skill[0] %}
   {% set wikiurl = 'http://en.wikipedia.org/wiki/'+skill[0] %}
   {% set khanurl = 'https://www.khanacademy.org/search?page_search_query='+skill[0] %}
   <div class=contwrap> 
       <tr>
-        <td align=right width=40%> <span class=email> <a href="{{ wikiurl }}" target="_blank"><img src="{{ url_for('static', filename='wikilogo.png') }}" alt="HTML tutorial" width="22" height="22"></a> <a href="{{ khanurl }}" target="_blank"><img src="{{ url_for('static', filename='khanlogo.png') }}" alt="HTML tutorial" width="22" height="22"></a> {{ skill[0] }} </span> </td>
+        <td align=right width=40%> <span class=email> <a href="{{ srurl }}" target="_blank"><img src="{{ url_for('static', filename='sliderulelogo.jpg') }}" alt="HTML tutorial" width="22" height="22"></a> <a href="{{ wikiurl }}" target="_blank"><img src="{{ url_for('static', filename='wikilogo.png') }}" alt="HTML tutorial" width="22" height="22"></a> <a href="{{ khanurl }}" target="_blank"><img src="{{ url_for('static', filename='khanlogo.png') }}" alt="HTML tutorial" width="22" height="22"></a> {{ skill[0] }} </span> </td>
           <!-- <input type=password size=30 name=password class=credbox placeholder="password"> </td> -->
         <td align=left width=40%> <canvas id="myCanvas" width="{{ barwidth }}" height="8em" style="background:#19D119" fillStyle="#FFF"></canvas></td>
       </tr>
