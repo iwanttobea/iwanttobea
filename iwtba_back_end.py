@@ -88,7 +88,6 @@ def is_ascii(s):
 
 # main function 
 def get_skills(job):
-    print '%%%%%%%%%%%%%%%%%%%%%%%%% testing API %%%%%%%%%%%%%%%%%%%%%%%%%'
     wc_dicts = get_dicts_api(job) # get word frequencies from job postings
     master_wc, master_pc = combine_dicts(wc_dicts) # combine word frequencies and count num pages words appear on
     word_occurances = master_wc
